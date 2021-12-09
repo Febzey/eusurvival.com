@@ -10,7 +10,7 @@ const SideMenu = () => {
             <li className="px-4 mb-4 text-gray-100 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-110"><FaUserShield /><a href="/rules">Rules</a></li>
 
 
-            <li className="px-4 mb-4 text-gray-100 bg-discordblue rounded-sm p-2 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-110"><FaDiscord /><a href="/">Discord</a></li>
+            <li className="px-4 mb-4 text-gray-100 bg-discordblue rounded-sm p-2 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-110"><FaDiscord /><a href="https://discord.com/invite/VyGufepXDf">Discord</a></li>
         </ul>
     </div>
     )

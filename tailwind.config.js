@@ -12,7 +12,7 @@ module.exports = {
         'hero': "url('/src/images/lavacast.png')",
         'contentBackground': "url('/src/images/contentBackground.svg')",
         'votebg': "url('/src/images/banner.jpg')",
-        'waveSvg': "url('/src/images/waveSvg.svg')"
+        'waveSvg': "url('/src/images/waveSvg.svg')",
       },
       fontFamily: {
         'permMarker': "'Permanent Marker', cursive",

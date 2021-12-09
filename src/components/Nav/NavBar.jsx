@@ -30,7 +30,7 @@ class NavBar extends Component {
               </ul>
 
               <div className="hidden md:flex text-white w-60 font-bebas">
-              <a href="/" className="px-5 bg-discordblue text-xl rounded-sm p-2 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer ml-7"><FaDiscord/>Discord</a>
+              <a href="https://discord.com/invite/VyGufepXDf" className="px-5 bg-discordblue text-xl rounded-sm p-2 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer ml-7"><FaDiscord/>Discord</a>
               </div>
     
               <button className="block lg:hidden menu-button" onClick={this.openSideMenu}>

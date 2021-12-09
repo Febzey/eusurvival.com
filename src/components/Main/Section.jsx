@@ -31,7 +31,6 @@ const Section = () => {
                         <a href="https://www.tiktok.com/@eusurvivalmc"><FaTiktok className="duration-300 ease-out transform hover:-translate-1 hover:scale-125 hover:text-indigo-500 cursor-pointer" /></a>
                         <a href="https://eusurvival.fandom.com/wiki/EuSurvival_Wiki"><FaReddit className="duration-300 ease-out transform hover:-translate-1 hover:scale-125 hover:text-yellow-500 cursor-pointer" /></a>
                         <a href="https://www.youtube.com/channel/UCJP3udBQemy1qjItVoiyNhA"><FaYoutube className="duration-300 ease-out transform hover:-translate-1 hover:scale-125 hover:text-red-600 cursor-pointer" /></a>
-                        {/* <a href="/"><FaInstagram className="duration-300 ease-out transform hover:-translate-1 hover:scale-125 hover:text-blue-400 cursor-pointer" /></a> */}
                         <a href="https://eusurvival.fandom.com/wiki/EuSurvival_Wiki"><FaWikipediaW className="duration-300 ease-out transform hover:-translate-1 hover:scale-125 hover:text-gray-400 cursor-pointer" /></a>
                     </div>
 

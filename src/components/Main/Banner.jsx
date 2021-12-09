@@ -19,7 +19,7 @@ const Banner = () => {
 
                         <h1 className="text-5xl font-bold font-bebas tracking-wider text-gray-50">Welcome to EuSurvival.com</h1>
 
-                        <p className="text-lg text-gray-50">The BEST Europe based Minecraft 1.18 Anarchy server</p>
+                        <p className="text-lg text-gray-50">The BEST Europe based Minecraft 1.17 (soon to be 1.18) Anarchy server</p>
 
                         <div className="flex md:flex-row flex-col items-center mt-6">
                             <a href="/rules" className="transition mx-2 md:mx-8 mt-6 bg-yellow-500 px-9 py-3 rounded text-xl font-bold tracking-widest font-permMarker text-white duration-700 ease-in-out transform hover:bg-opacity-80 hover:-translate-y-1 hover:scale-110">Rules</a>

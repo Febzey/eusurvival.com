@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-
+import chev from '../../images/chevron-right.svg';
 const Accordion = ({title, content}) => {
 
     const [active, setActive] = useState(false);
@@ -24,7 +24,7 @@ const Accordion = ({title, content}) => {
           >
             <p className="inline-block ml-auto mr-auto light text-lg font-mono">{title}</p>
             <img
-              src={`/src/images/chevron-right.svg`}
+              src={chev}
               alt="Chevron icon"
               className={`${rotate} inline-block text-white`}
             />

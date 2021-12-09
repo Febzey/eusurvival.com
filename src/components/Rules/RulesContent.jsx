@@ -1,4 +1,8 @@
 import React from 'react'
+import logo1 from '../../images/nohacking.png';
+import logo2 from '../../images/lag.png';
+import logo3 from '../../images/malware.png';
+import logo4 from '../../images/dox.png';
 
 const RulesContent = () => {
     return (
@@ -14,7 +18,7 @@ const RulesContent = () => {
                 </div>
                 
                 <div className="hidden md:block">
-                    <img alt="noHacking" src="/src/images/nohacking.png" height="150" width="150"></img>
+                    <img alt="noHacking" src={logo1}  height="150" width="150"></img>
                 </div>
 
             </div>
@@ -30,7 +34,7 @@ const RulesContent = () => {
                 </div>
                 
                 <div className="hidden md:block">
-                    <img alt="noHacking" src="/src/images/lag.png" height="150" width="150"></img>
+                <img alt="noHacking" src={logo2}  height="150" width="150"></img>
                 </div>
 
             </div>
@@ -46,7 +50,8 @@ const RulesContent = () => {
                 </div>
                 
                 <div className="hidden md:block">
-                    <img alt="noHacking" src="/src/images/malware.png" height="150" width="150"></img>
+                    <img alt="noHacking" src={logo3}  height="150" width="150"></img>
+
                 </div>
 
             </div>
@@ -62,7 +67,7 @@ const RulesContent = () => {
                 </div>
                 
                 <div className="hidden md:block">
-                    <img alt="noHacking" src="/src/images/dox.png" height="150" width="150"></img>
+                    <img alt="noHacking" src={logo4}  height="150" width="150"></img>
                 </div>
 
             </div>
