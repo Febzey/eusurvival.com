@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Roboto:ital,wght@0,300;0,400;1,300&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300;400&display=swap');
+@import url('//db.onlinewebfonts.com/c/6ab539c6fc2b21ff0b149b3d06d7f97c?family=Minecraft');
 
 @tailwind base;
 @tailwind components;
@@ -26,21 +28,15 @@ code {
 }
 
 
+
+
 .list-transition-enter,
 .list-transition-appear {
- 
   color:transparent;
   transform:scale(1,0);
   transform-origin:top;
   transition:transform ease-in-out;
 }
-
-.list-transition-enter-active,
-.list-transition-appear-active {
-
-}
-
-
 .list-transition-exit {
   max-height: 200px;
   transform-origin: top;
@@ -48,12 +44,10 @@ code {
   max-height: 200px;
   transition: transform 400ms ease-in-out;
 }
-
 .list-transition-exit-active {
   color: transparent;
   transition: all 400ms ease-in-out;
 }
-
 .a::before{
   content: '';
   display:block;
@@ -67,7 +61,6 @@ code {
   transform: scale(0, 1);
   transition: transform ease-in-out 250ms;
 }
-
 .a:hover::before{
   transform: scale(1,1);
 }

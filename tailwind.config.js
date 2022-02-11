@@ -1,7 +1,7 @@
 module.exports = {
-  // mode: 'jit',
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx,html}",
+  ],
   theme: {
     extend: {
       height: {
@@ -13,10 +13,14 @@ module.exports = {
         'contentBackground': "url('/src/images/contentBackground.svg')",
         'votebg': "url('/src/images/banner.jpg')",
         'waveSvg': "url('/src/images/waveSvg.svg')",
+        'wave': "url('/src/images/wave.svg')"
       },
       fontFamily: {
         'permMarker': "'Permanent Marker', cursive",
-        'bebas': "'Bebas Neue', cursive"
+        'bebas': "'Bebas Neue', cursive",
+        'Quicksand': "'Quicksand', sans-serif",
+        'Fredoka': "'Fredoka One', cursive",
+        'minecraft': "'Minecraft', sans-serif",
       },
       backgroundColor: {
         'discordblue': '#7289da',
