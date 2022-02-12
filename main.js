@@ -9,7 +9,6 @@ fastify.setNotFoundHandler(function (request, reply) {
     reply.sendFile('index.html')
 });
 
-
 fastify.register(fastifyStatic, {
     root: path.join(__dirname, 'dist'),
     prefix: '/',

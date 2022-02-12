@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx,html}",
+    "./src/**/*.{js,jsx,ts,tsx,html,ttf.otf}",
   ],
   theme: {
     extend: {
@@ -20,7 +20,7 @@ module.exports = {
         'bebas': "'Bebas Neue', cursive",
         'Quicksand': "'Quicksand', sans-serif",
         'Fredoka': "'Fredoka One', cursive",
-        'minecraft': "'Minecraft', sans-serif",
+        'minecraft': "'minecraft', sans-serif",
       },
       backgroundColor: {
         'discordblue': '#7289da',

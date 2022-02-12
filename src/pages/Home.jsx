@@ -4,32 +4,45 @@ import Section from "../components/Main/Section";
 import { useState, useEffect } from 'react';
 
 const Home = () => {
+    const ws = new WebSocket('ws://192.168.100.103:3333/playerlist');
+
     const [players, setPlayers] = useState([])
+    const [uPlayers, setUniquePlayers] = useState(0);
     const [msgs, setMessages] = useState([])
 
-    //TODO: work on sending messages back to forestbot for live chat
+    const messageSendFunc = (message) => {
+        if(!message) return;
+        ws.send(message);
+        return () => ws.close();
+    }
+
     useEffect(() => {
-        const ws = new WebSocket('ws://192.168.100.103:3333/playerlist');
         ws.onmessage = message => {
             const msg = JSON.parse(message.data);
-            
-            if (msg.playerlist) 
+
+            if (msg.uniquePlayers) {
+                console.log(msg.uniquePlayers)
+                setUniquePlayers(parseInt(msg.uniquePlayers));
+            }
+
+            if (msg.playerlist)
                 setPlayers(msg.playerlist)
 
             if (msg.user && msg.msg) {
                 console.log(`username: ${msg.user} message: ${msg.msg} 3`)
-                setMessages(last => [...last, {username: msg.user, message: msg.msg}])
+                setMessages(last => [...last, { username: msg.user, message: msg.msg }])
             }
 
             return () => ws.close();
         }
-    }, []);
 
+    }, []);
+    
     return (
         <div>
-            <Banner/>
-            <Section players={players} msgs={msgs}/>
-            <Info/>
+            <Banner />
+            <Section players={players} msgs={msgs} messageSendFunc={messageSendFunc} uPlayers={uPlayers} />
+            <Info />
         </div>
     )
 }

@@ -17,7 +17,7 @@ const Accordion = ({title, content}) => {
 
 
     return (
-        <div className="flex flex-col bg-yellow-400 bg-opacity-60 w-3/4 px-11 rounded shadow-lg">
+        <div className="flex flex-col bg-neutral-500 bg-opacity-40 w-3/4 px-11 rounded shadow-lg">
           <button
             className="py-6 box-border appearance-none cursor-pointer focus:outline-none flex items-center justify-between"
             onClick={toggleAccordion}

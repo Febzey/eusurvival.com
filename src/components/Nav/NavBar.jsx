@@ -21,7 +21,7 @@ class NavBar extends Component {
     
               <div className="text-yellow-500 text-3xl font-bold font-permMarker">EUSURVIVAL.COM</div>
     
-              <ul className="hidden md:flex flex-row text-white font-bebas text-xl">
+              <ul className="hidden lg:flex flex-row text-white font-bebas text-xl">
                 <li><a href="/" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaHome />Home</a></li>
                 <li><a href="/faq" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaQuestion />Faq</a></li>
                 <li><a href="https://www.eusurvival.com/bans-/bans.php" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaUserSlash />Ban-List</a></li>
@@ -29,8 +29,8 @@ class NavBar extends Component {
                 <li><a href="/rules" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaUserShield />Rules</a></li>
               </ul>
 
-              <div className="hidden md:flex text-white w-60 font-bebas">
-              <a href="https://discord.com/invite/VyGufepXDf" className="px-5 bg-discordblue text-xl rounded-sm p-2 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer ml-7"><FaDiscord/>Discord</a>
+              <div className="hidden lg:flex text-white w-60 font-bebas">
+              <a href="https://discord.com/invite/VyGufepXDf" className="px-5 bg-discordblue text-3xl rounded-sm p-2 duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer ml-7"><FaDiscord/></a>
               </div>
     
               <button className="block lg:hidden menu-button" onClick={this.openSideMenu}>
