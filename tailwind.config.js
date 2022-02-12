@@ -20,7 +20,7 @@ module.exports = {
         'bebas': "'Bebas Neue', cursive",
         'Quicksand': "'Quicksand', sans-serif",
         'Fredoka': "'Fredoka One', cursive",
-        'minecraft': "'minecraft', sans-serif",
+        'minecraft': "'VT323', monospace",
       },
       backgroundColor: {
         'discordblue': '#7289da',

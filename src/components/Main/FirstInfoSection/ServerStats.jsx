@@ -16,9 +16,9 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
     return (
         <div className="flex flex-col gap-3 bg-zinc-800 bg-opacity-60 w-[89vw] lg:w-[50vw] py-8 px-8">
             <div className="flex flex-col justify-center gap-2 items-center mb-14 text-center">
-                <h1 className="text-neutral-200 font-minecraft text-2xl">Server Stats</h1>
-                <p className="text-neutral-300 font-minecraft text-sm"><span className="underline decoration-yellow-500 decoration-4">{uPlayers}</span> unique players have ever joined.</p>
-                <p className="text-neutral-300 font-minecraft text-sm">The server and it's world was created on <span className="underline decoration-yellow-500 decoration-4">July 23rd, 2021</span>.</p>
+                <h1 className="text-neutral-200 font-minecraft text-4xl">Server Stats</h1>
+                <p className="text-neutral-300 font-minecraft text-xl"><span className="underline decoration-yellow-500 decoration-4">{uPlayers}</span> unique players have ever joined.</p>
+                <p className="text-neutral-300 font-minecraft text-xl">The server and it's world was created on <span className="underline decoration-yellow-500 decoration-4">July 23rd, 2021</span>.</p>
             </div>
             <div className="flex flex-col lg:flex-row gap-4">
                 {
@@ -33,8 +33,8 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
                             {
                                 msgs.map(item => (
                                     <div className="flex flex-row gap-3 mr-auto">
-                                        <p className="text-neutral-100 font-minecraft text-xs">&lt;{item.username}&gt;</p>
-                                        <p className="text-neutral-100 font-minecraft text-xs">{item.message}</p>
+                                        <p className="text-neutral-100 font-minecraft text-md">&lt;{item.username}&gt;</p>
+                                        <p className="text-neutral-100 font-minecraft text-md">{item.message}</p>
                                     </div>
                                 ))
                             }
@@ -42,10 +42,10 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
                         </div>
                     </div>
                     <div className="mt-auto w-full h-12 flex items-center border-t border-t-zinc-600">
-                        <input onChange={e => setMessage(`${e.target.value}`)} placeholder="Chat" className="w-full h-full px-4 font-minecraft bg-zinc-100" value={message}></input>
+                        <input onChange={e => setMessage(`${e.target.value}`)} placeholder="Chat" className="w-full text-xl h-full px-4 font-minecraft bg-zinc-100" value={message}></input>
                         {
-                            !cooldown ? <button className="w-24  bg-emerald-500 h-full text-neutral-100 font-minecraft" onClick={() => { messageSendFunc(message); handleCooldown() }}>Send</button>
-                                      : <button className="w-24  bg-red-400 h-full text-neutral-100 font-minecraft" onClick={() => {alert("Cooldown, wait 5 seconds.")}}>Send</button>
+                            !cooldown ? <button className="w-24  bg-emerald-500 h-full text-neutral-100 font-minecraft text-xl" onClick={() => { messageSendFunc(message); handleCooldown() }}>Send</button>
+                                      : <button className="w-24  bg-red-400 h-full text-neutral-100 font-minecraft text-xl" onClick={() => {alert("Cooldown, wait 5 seconds.")}}>Send</button>
 
                         }
                     </div>
@@ -63,7 +63,7 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
                             players.map(item => (
                                 <div className="flex flex-row gap-2">
                                     <img alt={`${item}`} src={`https://minotar.net/avatar/${item}/25`} />
-                                    <a className="text-neutral-200 font-minecraft" href={`https://namemc.com/profile/${item}`}>{item}</a>
+                                    <a className="text-neutral-200 font-minecraft text-lg" href={`https://namemc.com/profile/${item}`}>{item}</a>
                                 </div>
                             ))
                         }

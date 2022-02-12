@@ -17,11 +17,11 @@ class NavBar extends Component {
     render() {
         return (
           <>
-            <div className="z-10 fixed top-0 bg-black bg-opacity-40 w-full h-24 flex sm:justify-between justify-center flex-row items-center px-24">
+            <div className="z-10 fixed top-0 bg-black bg-opacity-40 w-full h-20 flex sm:justify-between justify-center flex-row items-center px-24">
     
               <div className="text-yellow-500 text-3xl font-bold font-permMarker">EUSURVIVAL.COM</div>
     
-              <ul className="hidden lg:flex flex-row text-white font-bebas text-xl">
+              <ul className="hidden lg:flex flex-row text-white font-bebas text-lg">
                 <li><a href="/" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaHome />Home</a></li>
                 <li><a href="/faq" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaQuestion />Faq</a></li>
                 <li><a href="https://www.eusurvival.com/bans-/bans.php" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaUserSlash />Ban-List</a></li>

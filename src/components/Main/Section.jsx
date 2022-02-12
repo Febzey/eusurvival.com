@@ -8,9 +8,9 @@ const Section = ({players, msgs, messageSendFunc, uPlayers}) => {
     const [showModal, setShowModal] = useState(false);
     return (
         <>
-            <div className="min-h-screen flex-col gap-32 w-full bg-wave bg-no-repeat bg-cover flex items-center justify-center">
+            <div className="py-48 flex-col gap-32 w-full bg-wave bg-no-repeat bg-cover flex items-center justify-center">
                
-                <div className="flex flex-col mt-36 lg:mt-0 lg:flex-row gap-6">
+                <div className="flex flex-col lg:flex-row gap-8">
                     <Socials/>
                     <StartPlaying setShowModal={setShowModal}/>
                 </div>
