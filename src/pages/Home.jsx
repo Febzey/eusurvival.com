@@ -6,13 +6,26 @@ import { useState, useEffect } from 'react';
 const Home = () => {
     const ws = new WebSocket('wss://ws.forestbot.io/playerlist');
 
+    const [showModal, setShowModal] = useState(false);
+    const [showInsertModal, setShowInsertModal] = useState(false);
+
     const [players, setPlayers] = useState([])
     const [uPlayers, setUniquePlayers] = useState(0);
     const [msgs, setMessages] = useState([])
+    
+    const [tempUsername, setTempUsername] = useState(null);
+    const [usernameIsInvalid, setUsernameIsInvalid] = useState(false);
+
+    const handleTempUsername = (username) => {
+        if (/\s/.test(username) || username.length > 16 || !username) return setUsernameIsInvalid(true);        
+        if (showInsertModal) setShowInsertModal(false);
+        return setTempUsername(username);
+    }
 
     const messageSendFunc = (message) => {
-        if(!message) return;
-        ws.send(message);
+        if (!tempUsername) return setShowInsertModal(true);
+        if(!message || message.length < 2) return;
+        //ws.send(`[${tempUsername}] » ${message}`);
         return () => ws.close();
     }
 
@@ -29,7 +42,6 @@ const Home = () => {
                 setPlayers(msg.playerlist)
 
             if (msg.user && msg.msg) {
-                console.log(`username: ${msg.user} message: ${msg.msg} 3`)
                 setMessages(last => [...last, { username: msg.user, message: msg.msg }])
             }
 
@@ -41,7 +53,7 @@ const Home = () => {
     return (
         <div>
             <Banner />
-            <Section players={players} msgs={msgs} messageSendFunc={messageSendFunc} uPlayers={uPlayers} />
+            <Section players={players} msgs={msgs} messageSendFunc={messageSendFunc} uPlayers={uPlayers} showModal={showModal} setShowModal={setShowModal} showInsertModal={showInsertModal} setShowInsertModal={setShowInsertModal} handleTempUsername={handleTempUsername} usernameIsInvalid={usernameIsInvalid} />
             <Info />
         </div>
     )

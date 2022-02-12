@@ -1,11 +1,9 @@
-import { useState } from 'react';
 import Socials from './FirstInfoSection/Socials';
 import StartPlaying from './FirstInfoSection/StartPlaying';
 import CopiedModal from './FirstInfoSection/CopiedSuccessModal';
 import ServerStats from './FirstInfoSection/ServerStats';
-
-const Section = ({players, msgs, messageSendFunc, uPlayers}) => {
-    const [showModal, setShowModal] = useState(false);
+import InsertUsernameModal from './FirstInfoSection/InsertUsername';
+const Section = ({players, msgs, messageSendFunc, uPlayers, showModal, setShowModal, showInsertModal, setShowInsertModal, handleTempUsername, usernameIsInvalid}) => {
     return (
         <>
             <div className="py-48 flex-col gap-32 w-full bg-wave bg-no-repeat bg-cover flex items-center justify-center">
@@ -19,6 +17,7 @@ const Section = ({players, msgs, messageSendFunc, uPlayers}) => {
            
             </div>
             {showModal && <CopiedModal setShowModal={setShowModal}/>}
+            {showInsertModal && <InsertUsernameModal setShowInsertModal={setShowInsertModal} handleTempUsername={handleTempUsername} usernameIsInvalid={usernameIsInvalid}/>}
         </>
     )
 }
