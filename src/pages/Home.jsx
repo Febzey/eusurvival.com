@@ -4,7 +4,7 @@ import Section from "../components/Main/Section";
 import { useState, useEffect } from 'react';
 
 const Home = () => {
-    const ws = new WebSocket('ws://192.168.100.103:3333/playerlist');
+    const ws = new WebSocket('ws://167.99.0.51:3333/playerlist');
 
     const [players, setPlayers] = useState([])
     const [uPlayers, setUniquePlayers] = useState(0);
