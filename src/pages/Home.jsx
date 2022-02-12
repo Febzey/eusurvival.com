@@ -25,7 +25,7 @@ const Home = () => {
     const messageSendFunc = (message) => {
         if (!tempUsername) return setShowInsertModal(true);
         if(!message || message.length < 2) return;
-        //ws.send(`[${tempUsername}] » ${message}`);
+        ws.send(`[${tempUsername}] » ${message}`);
         return () => ws.close();
     }
 
