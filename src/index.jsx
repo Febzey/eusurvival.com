@@ -9,7 +9,7 @@ import NavBar from './components/Nav/NavBar';
 import Footer from './components/Footer/Footer';
 
 const Index = () => {
-    const ws = new WebSocket(import.meta.env.VITE_APP_websocket_http);
+    const ws = new WebSocket(`${import.meta.env.VITE_APP_websocket_http}`);
 
     /**
      * Array of players currenty online.
@@ -40,10 +40,10 @@ const Index = () => {
 
     const messageSendFunc = message => {
         if (!tempUsername) return setShowInsertModal(true);
-        if (!message || message.length < 1) return;
+        if (!message || message.length < 2) return;
         ws.send(`[${tempUsername}] » ${message}`)
     }
-    
+
     useEffect(() => {
         ws.onmessage = message => {
             const msg = JSON.parse(message.data);
