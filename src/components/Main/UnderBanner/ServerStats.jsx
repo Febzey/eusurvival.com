@@ -9,7 +9,7 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
     const handleCooldown = async () => {
         setMessage(" ")
         if (!cooldown) setCooldown(true);
-        await sleep(4000);
+        await sleep(6000);
         return setCooldown(false);
     }
 
@@ -45,7 +45,7 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
                         <input onChange={e => setMessage(`${e.target.value}`)} placeholder="Chat" className="w-full text-xl h-full px-4 font-minecraft bg-zinc-100" value={message}></input>
                         {
                             !cooldown ? <button className="w-24  bg-emerald-500 h-full text-neutral-100 font-minecraft text-xl" onClick={() => { messageSendFunc(message); handleCooldown() }}>Send</button>
-                                      : <button className="w-24  bg-red-400 h-full text-neutral-100 font-minecraft text-xl" onClick={() => {alert("Cooldown, wait 5 seconds.")}}>Send</button>
+                                      : <button className="w-24  bg-red-400 h-full text-neutral-100 font-minecraft text-xl" onClick={() => {alert("Cooldown, wait 6 seconds.")}}>Send</button>
 
                         }
                     </div>
