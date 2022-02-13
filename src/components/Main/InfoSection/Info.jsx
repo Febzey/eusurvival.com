@@ -1,9 +1,8 @@
-import LazyShow from "./LazyShow";
+import LazyShow from "./LazyShow"
 
 const Info = () => {
     return (
         <div className="flex items-center py-12 flex-col bg-contentBackground bg-no-repeat bg-center">   
-
             <LazyShow>
                 <h1 className="text-4xl text-gray-200 font-Fredoka tracking-wider border-b-2 border-darkGray mb-7">EUSurvival ?</h1>
                 <p className="text-gray-200 text-xl tracking-wide mb-auto font-Quicksand">
@@ -37,6 +36,4 @@ const Info = () => {
         </div>
     )
 }
-
-
 export default Info;

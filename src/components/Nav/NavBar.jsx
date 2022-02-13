@@ -2,7 +2,7 @@ import { FaDiscord, FaHome, FaQuestion, FaUserSlash, FaBars, FaCheck, FaUserShie
 import { Component } from 'react';
 import MobileMenu from './NavMobile';
 import { CSSTransition } from 'react-transition-group';
-
+import { Link } from 'react-router-dom';
 class NavBar extends Component { 
     state = {
         sideMenu: false
@@ -22,11 +22,11 @@ class NavBar extends Component {
               <div className="text-yellow-500 text-3xl font-bold font-permMarker">EUSURVIVAL.COM</div>
     
               <ul className="hidden lg:flex flex-row text-white font-bebas text-lg">
-                <li><a href="/" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaHome />Home</a></li>
-                <li><a href="/faq" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaQuestion />Faq</a></li>
+                <li><Link to="/" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaHome />Home</Link></li>
+                <li><Link to="/faq" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaQuestion />Faq</Link></li>
                 <li><a href="https://www.eusurvival.com/bans-/bans.php" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaUserSlash />Ban-List</a></li>
-                <li><a href="/vote" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaCheck />Vote</a></li>
-                <li><a href="/rules" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaUserShield />Rules</a></li>
+                <li><Link to="/vote" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaCheck />Vote</Link></li>
+                <li><Link to="/rules" className="px-5 flex flex-row items-center duration-200 ease-in-out opacity-90 transform motion-safe hover:opacity-100 hover:scale-125 hover: cursor-pointer "><FaUserShield />Rules</Link></li>
               </ul>
 
               <div className="hidden lg:flex text-white w-60 font-bebas">

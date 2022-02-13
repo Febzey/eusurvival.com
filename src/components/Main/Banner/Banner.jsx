@@ -1,11 +1,11 @@
 import React from 'react'
-import image1 from "../../images/slide1.png";
-import image2 from "../../images/slide2.png";
-import image3 from "../../images/slide3.png";
-import image4 from "../../images/slide4.png";
-import image5 from "../../images/slide5.png";
-import image6 from "../../images/slide6.png";
-import image7 from "../../images/chronos.png";
+import image1 from "../../../images/slide1.png";
+import image2 from "../../../images/slide2.png";
+import image3 from "../../../images/slide3.png";
+import image4 from "../../../images/slide4.png";
+import image5 from "../../../images/slide5.png";
+import image6 from "../../../images/slide6.png";
+import image7 from "../../../images/chronos.png";
 import ImageSlider from './Slider';
 
 const Banner = () => {
