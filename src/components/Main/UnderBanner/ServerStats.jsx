@@ -14,7 +14,7 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
     }
 
     return (
-        <div className="flex flex-col gap-3 bg-zinc-800 bg-opacity-60 w-[89vw] lg:w-[50vw] py-8 px-8">
+        <div className="flex flex-col gap-3 bg-zinc-800 bg-opacity-60 w-[89vw] lg:w-[50vw] pt-8 px-8">
             <div className="flex flex-col justify-center gap-2 items-center mb-14 text-center">
                 <h1 className="text-neutral-200 font-minecraft text-4xl">Server Stats</h1>
                 <p className="text-neutral-300 font-minecraft text-xl"><span className="underline decoration-yellow-500 decoration-4">{uPlayers}</span> unique players have ever joined.</p>
@@ -70,6 +70,7 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
                     </div>
                 </div>
             </div>
+            <p className="text-neutral-200 mx-auto font-Quicksand text-sm pt-3 pb-6">Made possibly by: <a href="https://forestbot.io" className="text-sky-400 underline hover:text-sky-500">https://forestbot.io</a></p>
         </div>
     )
 }
