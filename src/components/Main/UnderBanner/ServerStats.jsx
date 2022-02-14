@@ -70,7 +70,7 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
                     </div>
                 </div>
             </div>
-            <p className="text-neutral-200 mx-auto font-Quicksand text-sm pt-3 pb-6">Made possibly by: <a href="https://forestbot.io" className="text-sky-400 underline hover:text-sky-500">https://forestbot.io</a></p>
+            <p className="text-neutral-200 mx-auto font-Quicksand text-sm pt-3 pb-6">Made possible by: <a href="https://forestbot.io" className="text-sky-400 underline hover:text-sky-500">https://forestbot.io</a></p>
         </div>
     )
 }
