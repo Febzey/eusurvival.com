@@ -6,13 +6,15 @@ import image4 from "../../../images/slide4.png";
 import image5 from "../../../images/slide5.png";
 import image6 from "../../../images/slide6.png";
 import image7 from "../../../images/chronos.png";
+import image8 from "../../../images/twisted1.png";
+import image9 from "../../../images/twisted2.png";
 import ImageSlider from './Slider';
 
 const Banner = () => {
     return (
         <>
             <div>
-                <ImageSlider images={[image1,image2,image3,image4,image5,image6,image7]}>
+                <ImageSlider images={[image1,image2,image3,image4,image5,image6,image7,image8,image9]}>
 
                     <div className="flex flex-col items-center w-64 md:w-auto">
 
