@@ -20,7 +20,7 @@ server.setNotFoundHandler((request: FastifyRequest, reply: FastifyReply) => {
 })
 
 server.get("/bans", async (req, res) => {
-    return res.redirect("https://www.eusurvival.com/bans-/bans.php")
+    return res.redirect("https://bans.eusurvival.com/")
 })
 
 
