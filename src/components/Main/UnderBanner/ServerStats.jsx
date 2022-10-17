@@ -28,8 +28,8 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
                 }
                 <div className="mr-auto h-full flex flex-col w-[100%] lg:w-[77%]">
                     <p className="text-neutral-200 font-minecraft text-sm pb-2">Server chat</p>
-                    <div className="flex flex-col bg-zinc-700 bg-opacity-50 rounded-sm mr-auto max-h-[335px] h-[335px] w-full overflow-x-hidden">
-                        <div className="flex gap-2 px-3 py-4 flex-col">
+                    <div className="flex flex-col bg-zinc-700 bg-opacity-50 rounded-sm mr-auto min-h-content w-full overflow-x-hidden">
+                        <div className="flex gap-2 px-3 py-4 flex-col min-h-fit">
                             {
                                 msgs.map(item => (
                                     <div className="flex flex-row gap-3 mr-auto">
@@ -41,14 +41,14 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
 
                         </div>
                     </div>
-                    <div className="mt-auto w-full h-12 flex items-center border-t border-t-zinc-600">
+                    {/* <div className="mt-auto w-full h-12 flex items-center border-t border-t-zinc-600">
                         <input onChange={e => setMessage(`${e.target.value}`)} placeholder="Chat" className="w-full text-xl h-full px-4 font-minecraft bg-zinc-100" value={message}></input>
                         {
                             !cooldown ? <button className="w-24  bg-emerald-500 h-full text-neutral-100 font-minecraft text-xl" onClick={() => { messageSendFunc(message); handleCooldown() }}>Send</button>
                                       : <button className="w-24  bg-red-400 h-full text-neutral-100 font-minecraft text-xl" onClick={() => {alert("Cooldown, wait 6 seconds.")}}>Send</button>
 
                         }
-                    </div>
+                    </div> */}
                 </div>
 
                 {
@@ -58,7 +58,7 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
                 }
                 <div className="ml-auto h-full flex gap-2 flex-col w-full lg:w-auto">
                     <p className="text-neutral-200 font-minecraft text-sm">Players online: {players.length}</p>
-                    <div className="flex gap-1 px-3 py-4 flex-col bg-zinc-700 bg-opacity-50 rounded-sm ml-auto max-h-96 h-96 w-full lg:w-56 overflow-scroll overflow-x-hidden">
+                    <div className="flex gap-1 px-3 py-4 flex-col bg-zinc-700 bg-opacity-50 rounded-sm ml-auto min-h-content w-full lg:w-56 overflow-scroll overflow-x-hidden">
                         {
                             players.map(item => (
                                 <div className="flex flex-row gap-2">
@@ -70,7 +70,7 @@ const ServerStats = ({ players, msgs, messageSendFunc, uPlayers }) => {
                     </div>
                 </div>
             </div>
-            <p className="text-neutral-200 mx-auto font-Quicksand text-sm pt-3 pb-6">Made possible by: <a href="https://forestbot.io" className="text-sky-400 underline hover:text-sky-500">https://forestbot.io</a></p>
+            <p className="text-neutral-200 mx-auto font-Quicksand text-sm pt-3 pb-6">Made possible by: <a href="https://forestbot.org" className="text-sky-400 underline hover:text-sky-500">https://forestbot.org</a></p>
         </div>
     )
 }
